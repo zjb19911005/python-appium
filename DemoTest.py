@@ -6,9 +6,15 @@ from appium import webdriver
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
 desired_caps['platformVersion'] = '4.4.2'
+<<<<<<< HEAD
 desired_caps['deviceName'] = 'Genymotion'
 desired_caps['appPackage'] = 'com.shishike.calm'
 desired_caps['appActivity'] = '.calmlauncher.CalmHomeActivity_'
+=======
+desired_caps['deviceName'] = 'Android Emulator'
+desired_caps['appPackage'] = 'com.shishike.calm'
+desired_caps['appActivity'] = '.Calculator'
+>>>>>>> origin/master
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
 
