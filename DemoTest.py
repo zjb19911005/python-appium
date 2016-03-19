@@ -2,21 +2,21 @@
 __author__ = 'Junior'
 
 from appium import webdriver
-
+# import unittest
+#
+# class reproduceblackscreen(unittest.TestSuite):
+#     def setUp(self):
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
 desired_caps['platformVersion'] = '4.4.2'
-<<<<<<< HEAD
-desired_caps['deviceName'] = 'Genymotion'
+
+desired_caps['deviceName'] = '0e1669d4e315e2b5'
 desired_caps['appPackage'] = 'com.shishike.calm'
 desired_caps['appActivity'] = '.calmlauncher.CalmHomeActivity_'
-=======
-desired_caps['deviceName'] = 'Android Emulator'
-desired_caps['appPackage'] = 'com.shishike.calm'
-desired_caps['appActivity'] = '.Calculator'
->>>>>>> origin/master
 
-driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    # def test(self):
+
+driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)
 
 driver.find_element_by_name("1").click()
 
@@ -36,4 +36,10 @@ driver.find_element_by_name("6").click()
 
 driver.find_element_by_name("=").click()
 
+
+
+    # def tearDown(self):
 driver.quit()
+#
+# if __name__=='__main__':
+#     unittest.main()
