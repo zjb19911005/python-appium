@@ -18,25 +18,63 @@ desired_caps['appActivity'] = '.calmlauncher.CalmHomeActivity_'
 
 driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)#默认写法
 
+i=1
+
 #下面就开始找元素找点了
+driver.implicitly_wait(20)
 
-driver.find_element_by_name("1").click()
+driver.find_element_by_id('com.shishike.calm:id/negative_button').click()
+driver.implicitly_wait(3)
+driver.find_element_by_name('admin').click()
+driver.implicitly_wait(1)
+for i in range(1,7):
+    driver.find_element_by_id('com.shishike.calm:id/eight').click()
+    i=i+1
 
-driver.find_element_by_name("5").click()
+driver.implicitly_wait(3)
 
-driver.find_element_by_name("9").click()
 
-driver.find_element_by_name("delete").click()
+# driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[contains(@index,1)]").click()
+driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[2]").click()
 
-driver.find_element_by_name("9").click()
+driver.implicitly_wait(3)
 
-driver.find_element_by_name("5").click()
+#
+# for i in range(50):
+driver.find_element_by_name('餐盒关联').click()
 
-driver.find_element_by_name("+").click()
+driver.find_element_by_id('com.shishike.calm:id/btn_order_dish_right_cash').click()
+driver.implicitly_wait(3)
 
-driver.find_element_by_name("6").click()
+driver.find_element_by_name('扫码').click()
+driver.implicitly_wait(3)
 
-driver.find_element_by_name("=").click()
+driver.find_element_by_name('二维码').click()
+driver.implicitly_wait(10)
+
+driver.find_element_by_id('com.shishike.calm:id/pay_back').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/cashier_title_bar_menu_btn').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/ordercenter').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/un_payment').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/unpay_order_detail_un_use').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/btn_ok')
+driver.implicitly_wait(5)
+
+driver.find_element_by_id('com.shishike.calm:id/cashier_title_bar_menu_btn').click()
+driver.implicitly_wait(3)
+
+driver.find_element_by_id('com.shishike.calm:id/orderdishes').click()
+driver.implicitly_wait(5)
 
 
 
