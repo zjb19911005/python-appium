@@ -35,7 +35,7 @@ driver.implicitly_wait(3)
 
 
 # driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[contains(@index,1)]").click()
-driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[2]").click()
+driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[0]").click()
 
 driver.implicitly_wait(3)
 
