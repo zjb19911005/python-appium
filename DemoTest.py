@@ -6,7 +6,7 @@ from appium import webdriver
 #
 # class reproduceblackscreen(unittest.TestSuite):
 #     def setUp(self):
-desired_caps = {}
+desired_caps = {}#这里其实也可以把下面的参数,放到caps里面,通过字典的结构模式
 desired_caps['platformName'] = 'Android'
 desired_caps['platformVersion'] = '4.4.2'
 
@@ -16,7 +16,9 @@ desired_caps['appActivity'] = '.calmlauncher.CalmHomeActivity_'
 
     # def test(self):
 
-driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)
+driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)#默认写法
+
+#下面就开始找元素找点了
 
 driver.find_element_by_name("1").click()
 
