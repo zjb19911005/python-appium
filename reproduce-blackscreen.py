@@ -82,7 +82,8 @@ class reproduceblackscreen(unittest.TestCase):
             self.driver.switch_to_alert()
             timewait(3)
 
-            self.driver.find_element_by_xpath("////android.widget.Button[1]").click()
+            self.driver.find_element_by_name('作废').click()
+            # self.driver.find_element_by_xpath("////android.widget.Button[1]").click()
             timewait(3)
 
 
