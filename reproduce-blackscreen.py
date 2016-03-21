@@ -2,6 +2,13 @@
 __author__ = 'Junior'
 
 from appium import webdriver
+
+
+def time(self):
+    driver.implicitly_wait(self)
+
+
+
 # import unittest
 #
 # class reproduceblackscreen(unittest.TestSuite):
@@ -21,60 +28,59 @@ driver = webdriver.Remote('http://localhost:4723/wd/hub',desired_caps)#默认写
 i=1
 
 #下面就开始找元素找点了
-driver.implicitly_wait(20)
+time(20)
 
 driver.find_element_by_id('com.shishike.calm:id/negative_button').click()
-driver.implicitly_wait(3)
+time(1)
 driver.find_element_by_name('admin').click()
-driver.implicitly_wait(1)
+time(1)
 for i in range(1,7):
     driver.find_element_by_id('com.shishike.calm:id/eight').click()
     i=i+1
 
-driver.implicitly_wait(3)
+time(1)
 
 
-# driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[contains(@index,1)]").click()
-driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[0]").click()
+driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[2]/android.widget.ImageView[1]").click()
 
-driver.implicitly_wait(3)
+time(1)
 
 #
 # for i in range(50):
-driver.find_element_by_name('餐盒关联').click()
+driver.find_element_by_xpath("//android.view.View[1]/android.widget.LinearLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.GridView[1]/android.widget.FrameLayout[9]").click()
+time(1)
 
 driver.find_element_by_id('com.shishike.calm:id/btn_order_dish_right_cash').click()
-driver.implicitly_wait(3)
+time(1)
 
 driver.find_element_by_name('扫码').click()
-driver.implicitly_wait(3)
-
+time(1)
 driver.find_element_by_name('二维码').click()
-driver.implicitly_wait(10)
+time(10)
 
 driver.find_element_by_id('com.shishike.calm:id/pay_back').click()
-driver.implicitly_wait(3)
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/cashier_title_bar_menu_btn').click()
-driver.implicitly_wait(3)
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/ordercenter').click()
-driver.implicitly_wait(3)
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/un_payment').click()
-driver.implicitly_wait(3)
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/unpay_order_detail_un_use').click()
-driver.implicitly_wait(3)
+time(3)
 
-driver.find_element_by_id('com.shishike.calm:id/btn_ok')
-driver.implicitly_wait(5)
+driver.find_element_by_xpath("////android.widget.Button[1]").click()
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/cashier_title_bar_menu_btn').click()
-driver.implicitly_wait(3)
+time(3)
 
 driver.find_element_by_id('com.shishike.calm:id/orderdishes').click()
-driver.implicitly_wait(5)
+time(3)
 
 
 
