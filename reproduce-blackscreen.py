@@ -4,11 +4,6 @@ __author__ = 'Junior'
 from appium import webdriver
 import random
 import time
-
-
-
-
-
 import unittest
 
 class reproduceblackscreen(unittest.TestCase):
@@ -17,14 +12,12 @@ class reproduceblackscreen(unittest.TestCase):
         self.desired_caps['platformName'] = 'Android'
         self.desired_caps['platformVersion'] = '4.4.2'
 
-        self.desired_caps['deviceName'] = '151291d4e3168ac8'
+        self.desired_caps['deviceName'] = '192.168.11.151:5555'
         self.desired_caps['appPackage'] = 'com.shishike.calm'
         self.desired_caps['appActivity'] = '.calmlauncher.CalmHomeActivity_'
 
     def test_reproduce(self):
-
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub',self.desired_caps)#默认写法
-
         def timewait(int):
             self.driver.implicitly_wait(int)
 
@@ -42,9 +35,7 @@ class reproduceblackscreen(unittest.TestCase):
         for i in range(1,7):
             self.driver.find_element_by_id('com.shishike.calm:id/eight').click()
             i=i+1
-
             timewait(1)
-
 
         self.driver.find_element_by_xpath("//android.widget.GridView[1]/android.widget.LinearLayout[2]/android.widget.ImageView[1]").click()
 
