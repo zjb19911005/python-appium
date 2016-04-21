@@ -1,0 +1,9 @@
+*** Settings ***
+Library           AppiumLibrary
+
+*** Variables ***
+${APP}            com.shishike.calm/.calmlauncher.CalmHomeActivity_
+
+*** Test Cases ***
+start
+    Open Application    ${APP}
